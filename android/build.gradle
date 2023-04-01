@@ -79,6 +79,18 @@ android {
   lintOptions {
     abortOnError false
   }
+
+  externalNativeBuild {
+    cmake {
+        path "CMakeLists.txt"
+    }
+  }
+
+  sourceSets {
+    main {
+        jniLibs.srcDirs = ['src/main/jniLibs']
+    }
+  }
 }
 
 repositories {
